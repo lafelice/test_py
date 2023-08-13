@@ -12,9 +12,8 @@ def test_key_presses(browser):
     time.sleep(1)
 
 
-    browser.find_element(By.ID, "target").send_keys(Keys.ENTER)
+    browser.find_element(By.ID, "target").send_keys(Keys.TAB)
     time.sleep(2)
     result = browser.find_element(By.ID, "result")
 
-    assert "You entered: ENTER" in result.text
-
+    assert "You entered: TAB" in result.text
